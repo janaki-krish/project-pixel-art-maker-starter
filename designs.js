@@ -12,6 +12,7 @@ function processSubmit() {
 	makeGrid(x, y, col);
 };
 
+/*
 $(document).ready(function() {
 	$("#input_submit").click(function() {
 	var x = document.getElementById("input_height").value;
@@ -22,6 +23,7 @@ $(document).ready(function() {
 });
 
 });
+*/
 
 
 /**
