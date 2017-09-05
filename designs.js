@@ -3,6 +3,15 @@
 
 // When size is submitted by the user, call makeGrid()
 
+
+function processSubmit() {
+	var x = document.getElementById("input_height").value;
+	var y = document.getElementById("input_width").value;
+	var col = document.getElementById("colorPicker").value;
+	clearGrid();
+	makeGrid(x, y, col);
+};
+
 $(document).ready(function() {
 	$("#input_submit").click(function() {
 	var x = document.getElementById("input_height").value;
@@ -37,9 +46,14 @@ function makeGrid(x, y, color) {
 		}
 	};
 };
-
+/*
 function clearGrid() {
 	$("#pixel_canvas tr").remove();
+};
+*/
+
+function clearGrid() {
+	document.getElementById("pixel_canvas").innerHTML = "";
 };
 
 function fillColor(evt) {
