@@ -11,10 +11,10 @@ function processSubmit(event) {
 	var y = document.getElementById("input_width").value;
 	var col = document.getElementById("colorPicker").value;
 	clearGrid();
-	makeGrid(x, y, col);
+	makeGrid(x, y);
 };
 
-function makeGrid(x, y, color) {
+function makeGrid(x, y) {
 
 // Your code goes here!
 	var canvas = document.getElementById("pixel_canvas");
@@ -26,7 +26,6 @@ function makeGrid(x, y, color) {
 			var cell = row.insertCell();
 			cell.innerHTML = " hi";
 			cell.addEventListener("click", fillColor);
-			cell.myParam = color;
 		}
 	};
 };
@@ -37,7 +36,7 @@ function clearGrid() {
 };
 
 function fillColor(evt) {
-	this.style.backgroundColor = evt.target.myParam;
+	this.style.backgroundColor = document.getElementById("colorPicker").value;
 };
 
 
